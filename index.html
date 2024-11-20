@@ -219,7 +219,7 @@
         <div class="section_container">
             <div class="contact_container">
                 <div class="contact_form">
-                    <form action="#">
+                    <form id="contactForm">
                         <div class="field">
                             <label for="Name">Full Name</label>
                             <input type="text" id="Name" placeholder="Your Name" required>
@@ -229,17 +229,21 @@
                             <input type="text" id="Email" placeholder="Your Email" required>
                         </div>
                         <div class="field">
-                            <label for="Name">Your Number</label>
+                            <label for="Number">Your Number</label>
                             <input type="number" id="Number" placeholder="Your Contact number" required>
                         </div>
                         <div class="field">
-                            <label for="textarea">complain</label>
+                            <label for="textarea">Complain</label>
                             <textarea name="text" id="textarea" placeholder="Your Message"></textarea>
                         </div>
-
-                        <button class="button" id="submit">Submit</button>
+                
+                        <button type="submit" class="button" id="submit">Submit</button>
                     </form>
                 </div>
+                
+                <p id="feedback" class="success" style="display: none;">Message sent successfully!</p>
+                <p id="error" class="error" style="display: none;">Something went wrong. Please try again.</p>
+                
 
                 <div class="contact_text">
                     <div class="contact_items">
@@ -331,6 +335,8 @@
         </div>
         <span>&copy; Dental Hub </span>
     </footer>
+
+    <script src="./contact.js"></script>
 
    
     

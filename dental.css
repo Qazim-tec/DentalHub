@@ -295,8 +295,7 @@ margin-top: 8px;
 
 .about_container .image_section img{
     width: 80%;
-    border: 2px solid grey;
-    border-radius: 5px;
+   
 }
 
 .services{
@@ -495,6 +494,19 @@ margin-top: 8px;
     background: transparent;
     border-color: var(--primary-color);
 }
+
+.success {
+    color: green;
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  .error {
+    color: red;
+    text-align: center;
+    margin-top: 20px;
+  }
+  
 
 .contact_text .contact_items {
     display: flex;
