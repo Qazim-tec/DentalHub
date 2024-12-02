@@ -16,10 +16,8 @@
             <div class="nav_logo">
                 <a href="#">
                     <img src="New folder/img-dentist-home-1920w.webp" alt="Dental_logo">
-
                     <h2>Dental Hub Services</h2>
                 </a>
-                
             </div>
 
             <input type="checkbox" id="click">
@@ -29,22 +27,18 @@
             </label>
 
             <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#service">Service</a></li>
+                <li><a href="#">Home</a></li>                
                 <li><a href="#about_us">About us</a></li>
-                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#service">Service</a></li>
                 <li><a href="#why">Why us</a></li>
+                <li><a href="#gallery">Gallery</a></li>
                 <li><a href="#contact">Contact</a></li>
-                
             </ul>
 
-            <a href="Sign-up.html" target="_blank" style="position: absolute; right: 20px;"><button class="sign-in-button">Sign In</button>
+            <a href="Sign-up.html" target="_blank" style="position: absolute; right: 20px;">
+                <button class="sign-in-button" id="loginButton">Sign In</button>
             </a>
         </nav>
-
-       
-
-        
     </header>
 
     <section class="hero_section">
@@ -56,22 +50,16 @@
                     <p>Welcome to our mobile dental service! Experience top-notch dental care right at your doorstep. Book an appointment and enjoy a brighter, healthier smile with our expert team.</p>
 
                     <div class="hero_section_button">
-                        <a href="./HomeService/HomeService.html"><button class="button">Home service</button></a>
-                        <a href="./HomeService/Appointment.html"><button class="button">Book Appointment</button></a>
-                        <a href="https://wa.me/2349081161431"><button class="button">Chat a Dentist</button></a>
+                        <a href="./HomeService/HomeService.html"><button class="button" id="homeServiceButton">Home service</button></a>
+                        <a href="./HomeService/Appointment.html"><button class="button" id="bookAppointmentButton">Book Appointment</button></a>
+                        <a href="https://wa.me/2349081161431"><button class="button" id="chatDentistButton">Chat a Dentist</button></a>
                     </div>
+                    
                 </div>
 
                 <class class="image_section">
-                    <img src="New folder/img-dentist-home-1920w.webp" alt="">
-                    <div class="loop cubes">
-                        <div class="item cubes"></div>
-                        <div class="item cubes"></div>
-                        <div class="item cubes"></div>
-                        <div class="item cubes"></div>
-                        <div class="item cubes"></div>
-                        <div class="item cubes"></div>
-                    </div>
+                    <img src="New folder/img-dentist-home-1920w.webp" alt="" class="hero_image">
+                    
                 </class>
             </div>
         </div>
@@ -81,31 +69,32 @@
         <div class="section_container">
             <div class="about_container">
                 <div class="text_section">
-                    <h2 class="section_title">About us</h2>
+                    <h2 class="section_title">About Us</h2>
                     <div class="image_section-phone">
-                        <img src="New folder/about usImage.png" alt="">
+                        <img src="New folder/about usImage.png" alt="About us image">
                     </div>
-                    <p>we believe that a healthy smile is the foundation of overall well-being. 
-                        Our dedicated team of experienced professionals is committed to providing 
-                        personalized and compassionate dental care to each of our patients. From routine 
-                        cleanings to advanced restorative treatments, we use the latest technology 
-                        to ensure your comfort and satisfaction. Whether you’re here for a 
-                        regular check-up or a complex procedure, we strive to make every 
-                        visit a positive experience. Trust us to keep your smile bright, healthy, 
-                        and confident
+                    <p>
+                        We believe that a healthy smile is the foundation of overall well-being. Our dedicated team of 
+                        experienced professionals is committed to providing personalized and compassionate dental care 
+                        to each of our patients. From routine cleanings to advanced restorative treatments, we use the 
+                        latest technology to ensure your comfort and satisfaction. Whether you’re here for a regular 
+                        check-up or a complex procedure, we strive to make every visit a positive experience. Trust us 
+                        to keep your smile bright, healthy, and confident.
                     </p>
                 </div>
-
+        
                 <div class="image_section">
-                    <img src="New folder/about usImage.png" alt="">
+                    <img src="New folder/about usImage.png" alt="About us image">
                 </div>
             </div>
         </div>
     </section>
+    
 
     <section class="services" id="service">
         <h2 class="section_title">
             Our Service
+            <span class="ourservicespan"></span>
         </h2>
         <div class="section_container">
             <div class="service_container">
@@ -345,6 +334,9 @@
     </footer>
 
     <script src="./contact.js"></script>
+    <script src="index.js"></script>
+
+    
 
    
     

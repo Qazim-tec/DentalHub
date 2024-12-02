@@ -17,7 +17,7 @@ document.getElementById("appointmentForm").addEventListener("submit", async (eve
     };
 
     try {
-        const response = await fetch("http://localhost:5208/api/Appointment/NewAppointment", {
+        const response = await fetch("https://dentalapi-dija.onrender.com/api/Appointment/NewAppointment", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"

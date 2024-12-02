@@ -19,7 +19,7 @@ document.getElementById('contactForm').addEventListener('submit', async (event) 
   };
 
   try {
-    const response = await fetch('http://localhost:5208/api/Dental/NewContactUs', {
+    const response = await fetch('https://dentalapi-dija.onrender.com/api/Dental/NewContactUs', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'

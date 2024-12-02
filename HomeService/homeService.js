@@ -14,7 +14,7 @@ document.getElementById('homeServiceRequestForm').onsubmit = async function (eve
     responseMessage.textContent = '';  // Clear any previous messages
 
     try {
-        const response = await fetch('http://localhost:5208/api/HomeService/NewHomeService', {
+        const response = await fetch('https://dentalapi-dija.onrender.com/api/HomeService/NewHomeService', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(formData)
