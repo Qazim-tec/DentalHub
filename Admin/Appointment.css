@@ -1,0 +1,133 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.admin-header {
+    background-color: #FF4B4B;
+    display: flex;
+    justify-content:space-between;
+    gap: 20px;
+    color: #fff;
+    padding: 20px 60px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+
+
+
+.logo img{
+    width: 40px;
+    height: 40px;
+}
+
+.admin-header h1 {
+    font-size: 28px;
+}
+
+.home a{
+    font-size: 20px;
+    text-decoration: none;
+}
+
+.container{
+    margin-top: 30px;
+}
+
+.appointments-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.appointment-card {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 15px;
+    width: 300px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.appointment-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.appointment-card h3 {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.appointment-card p {
+    color: #555;
+    margin: 5px 0;
+}
+
+.button-group {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.delete-btn {
+    background-color: #ff4d4d;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    cursor: pointer;
+    border-radius: 3px;
+    font-size: 14px;
+}
+
+.delete-btn:hover {
+    background-color: #e60000;
+}
+
+.whatsapp-btn, .email-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    color: #fff;
+    font-size: 18px;
+    border-radius: 50%;
+    text-decoration: none;
+}
+
+.whatsapp-btn {
+    background-color: #25D366;
+}
+
+.whatsapp-btn:hover {
+    background-color: #1EBE54;
+}
+
+.email-btn {
+    background-color: #0072C6;
+}
+
+.email-btn:hover {
+    background-color: #005A9E;
+}
+
+.loading {
+    color: #555;
+    text-align: center;
+    margin-top: 20px;
+}
