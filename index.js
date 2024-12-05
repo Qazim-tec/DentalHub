@@ -63,3 +63,6 @@ window.addEventListener('DOMContentLoaded', () => {
     chatDentistButton.addEventListener('click', (event) => handleButtonClick(event, 'ChatDentist.html'));  // Add similar check for "Chat a Dentist"
 });
 
+
+
+

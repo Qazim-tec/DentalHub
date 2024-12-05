@@ -75,7 +75,7 @@ header {
 .head {
     flex: 1;
     text-align: left;
-    color: white;
+    color: black;
     width: 30rem;
     p{
         text-align: center;
@@ -141,14 +141,19 @@ textarea {
 /* Responsive adjustments */
 @media screen and (max-width: 576px) {
     .container {
+        margin-top: 40px;
         flex-direction: column;
         padding: 20px;
     }
     
-    .head,
+   
     .home-service-form {
         width: 100%;
         margin: 0;
+    }
+
+    .head{
+        display: none;
     }
     
     .home-service-form {
@@ -161,7 +166,7 @@ textarea {
 .blob{
     position: absolute;
     z-index: -2;
-    left: 160px;
-    bottom: 30px;
+    left: 30px;
+    bottom: 10px;
     width: 700px;
 }

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Sign-Up</title>
+    <link rel="stylesheet" href="SignUpMobile.css">
+    <script src="redirect.js"></script>
+</head>
+<body>
+    <header>
+        <nav class="nav">
+            <div class="logo-container">
+                <img src="./New folder/img-dentist-home-1920w.webp" alt="Logo">
+                <h1>Dental Hub</h1>
+            </div>
+            <ul class="nav-links">
+                <li><a href="./index.html">Home</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <form id="admin-signup-form">
+            <h2>Sign Up</h2>
+            <input type="text" id="fullName" placeholder="Full Name" required>
+            <input type="email" id="email" placeholder="Email Address" required>
+            <input type="password" id="password" placeholder="Password" required>
+            <input type="password" id="confirmPassword" placeholder="Confirm Password" required>
+            <input type="text" id="phoneNumber" placeholder="Phone Number" required>
+            <input type="text" id="homeAddress" placeholder="Home Address" required>
+            <button type="submit">Sign Up</button>
+            <p>Already have an account? <a href="SignInMobile.html">Login</a></p>
+        </form>
+        <p id="response-message"></p>
+    </div>
+
+    <script src="SignUpMobile.js"></script>
+</body>
+</html>
