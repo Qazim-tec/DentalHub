@@ -5,37 +5,84 @@ body {
 }
 
 .admin-header {
-    background-color: #FF4B4B;
     display: flex;
-    justify-content:space-between;
-    gap: 20px;
-    color: #fff;
-    padding: 20px 60px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.logo{
-    display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    gap: 5px;
+    padding: 10px 20px;
+    background-color: red;
+    flex-wrap: wrap; /* Allows wrapping for smaller screens */
 }
 
-
-
-.logo img{
-    width: 40px;
-    height: 40px;
+.admin-header .logo {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Adds spacing between the image and text */
 }
 
-.admin-header h1 {
-    font-size: 28px;
+.admin-header .logo img {
+    width: 50px; /* Scales the logo image */
+    height: auto;
 }
 
-.home a{
-    font-size: 20px;
+.admin-header .logo h1 {
+    font-size: 1.5rem; /* Adjusts logo text size */
+    margin: 0;
+}
+
+.admin-header .title {
+    flex: 1; /* Makes the title take available space */
+    text-align: center;
+    font-size: 1.5rem;
+    margin: 10px 0;
+}
+
+.admin-header .home {
+    font-size: 1rem;
+}
+
+.admin-header .home a {
     text-decoration: none;
+    color: #0077cc;
+    transition: color 0.3s;
 }
+
+.admin-header .home a:hover {
+    color: #0056a1;
+}
+
+@media screen and (max-width: 768px) {
+    .admin-header {
+        flex-direction: column; /* Stacks items vertically */
+        text-align: center;
+    }
+
+    .admin-header .logo img {
+        width: 40px; /* Smaller logo for smaller screens */
+    }
+
+    .admin-header .logo h1 {
+        font-size: 1.2rem; /* Adjust logo text size */
+    }
+
+    .admin-header .title {
+        font-size: 1.2rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .admin-header .logo img {
+        width: 35px; /* Further reduces logo size */
+    }
+
+    .admin-header .logo h1 {
+        font-size: 1rem; /* Smaller logo text for very small screens */
+    }
+
+    .admin-header .title {
+        font-size: 1rem; /* Adjusts title font size */
+    }
+}
+
 
 .container{
     margin-top: 30px;

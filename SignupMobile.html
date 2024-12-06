@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Admin Sign-Up</title>
+    <title>users-Sign-Up</title>
+    <link rel="icon" href="./New folder/img-dentist-home-1920w.webp" type="image/x-icon">
     <link rel="stylesheet" href="SignUpMobile.css">
     <script src="redirect.js"></script>
 </head>
@@ -25,13 +26,23 @@
             <h2>Sign Up</h2>
             <input type="text" id="fullName" placeholder="Full Name" required>
             <input type="email" id="email" placeholder="Email Address" required>
-            <input type="password" id="password" placeholder="Password" required>
-            <input type="password" id="confirmPassword" placeholder="Confirm Password" required>
+            
+            <div class="password-container">
+                <input type="password" id="password" placeholder="Password" required>
+                <i id="password-eye" class="eye-icon">&#128065;</i> <!-- Eye icon to toggle password visibility -->
+            </div>
+            
+            <div class="password-container">
+                <input type="password" id="confirmPassword" placeholder="Confirm Password" required>
+                <i id="confirm-password-eye" class="eye-icon">&#128065;</i> <!-- Eye icon to toggle password visibility -->
+            </div>
+            
             <input type="text" id="phoneNumber" placeholder="Phone Number" required>
             <input type="text" id="homeAddress" placeholder="Home Address" required>
             <button type="submit">Sign Up</button>
             <p>Already have an account? <a href="SignInMobile.html">Login</a></p>
         </form>
+        
         <p id="response-message"></p>
     </div>
 

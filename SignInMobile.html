@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Admin Sign In</title>
+    <title>users-Sign In</title>
+    <link rel="icon" href="./New folder/img-dentist-home-1920w.webp" type="image/x-icon">
     <link rel="stylesheet" href="SignInMobile.css">
     <script src="redirect.js"></script>
 </head>
@@ -25,13 +26,19 @@
     <!-- Main content area -->
     <main>
         <section class="signin-form">
-            <h2>Admin Sign In</h2>
+            <h2>Users Sign In</h2>
             <form id="admin-signin-form">
                 <input type="email" id="email" placeholder="Enter Email" required>
-                <input type="password" id="password" placeholder="Enter Password" required>
+                
+                <div class="password-container">
+                    <input type="password" id="password" placeholder="Enter Password" required>
+                    <i id="password-eye" class="eye-icon">&#128065;</i> <!-- Eye icon to toggle password visibility -->
+                </div>
+                
                 <button type="submit">Sign In</button>
                 <p id="response-message"></p>
             </form>
+            
 
             <!-- Sign up link for new users -->
             <div class="signup-link">

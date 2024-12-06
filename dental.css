@@ -69,7 +69,7 @@ nav{
     justify-content: space-between;
     align-items: center;
     /* margin: 0 ; */
-    border: 2px solid black;
+    /* border: 2px solid black; */
 }
 
 .nav_logo a img {
@@ -342,12 +342,12 @@ ul{
 /* Mobile Image Section */
 .about_container .image_section-phone {
     display: none;
-    border: 1px solid red;
+    
 }
 
 .about_container .image_section-phone img {
     width: 100%;
-    border: 2px solid grey;
+ 
     border-radius: 5px;
 }
 
@@ -551,8 +551,7 @@ ul{
 .contact{
     background: var(--light-gray-color);
     padding: 60px 20px 100px;
-    border: 2px solid rgb(109, 12, 12);
-
+   
 }
 
 .contact_container{
@@ -716,6 +715,8 @@ footer{
 .footer_section .follow_us i:hover{
     color: var(--secondary-color);
 }
+
+
 
 
 @media screen and (max-width: 1024px){
