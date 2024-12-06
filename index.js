@@ -40,6 +40,38 @@ window.addEventListener('DOMContentLoaded', () => {
     }
 });
 
+
+window.addEventListener('DOMContentLoaded', () => {
+    const userFullName = localStorage.getItem('userFullName'); // Retrieve user's full name
+    const loginButton = document.getElementById('loginButton'); // Get the login button
+
+    if (userFullName && loginButton) {
+        // Create a welcome message element
+        const welcomeMessage = document.createElement('span');
+        welcomeMessage.textContent = `Welcome, ${userFullName}`; // Display the user's name
+        welcomeMessage.style.cursor = 'pointer';
+
+        // Replace the login button with the welcome message
+        loginButton.replaceWith(welcomeMessage);
+
+        // Add a click listener for logout functionality
+        welcomeMessage.addEventListener('click', () => {
+            // Show a confirmation dialog box
+            const userConfirmed = confirm('Do you want to logout?');
+            if (userConfirmed) {
+                localStorage.clear(); // Clear all stored user data
+                alert('You have been logged out successfully.');
+                // Remain on the current page after logout
+            } else {
+                alert('You remain logged in.');
+                // Do nothing, stay on the index page
+            }
+        });
+    }
+});
+
+
+
 window.addEventListener('DOMContentLoaded', () => {
     const userFullName = localStorage.getItem('userFullName'); // Retrieve the user's full name from localStorage
 
@@ -62,6 +94,10 @@ window.addEventListener('DOMContentLoaded', () => {
     bookAppointmentButton.addEventListener('click', (event) => handleButtonClick(event, 'Appointment.html'));
     chatDentistButton.addEventListener('click', (event) => handleButtonClick(event, 'ChatDentist.html'));  // Add similar check for "Chat a Dentist"
 });
+
+
+
+
 
 
 
