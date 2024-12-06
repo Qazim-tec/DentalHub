@@ -41,34 +41,36 @@ window.addEventListener('DOMContentLoaded', () => {
 });
 
 
-window.addEventListener('DOMContentLoaded', () => {
-    const userFullName = localStorage.getItem('userFullName'); // Retrieve user's full name
-    const loginButton = document.getElementById('loginButton'); // Get the login button
+// window.addEventListener('DOMContentLoaded', () => {
+//     const userFullName = localStorage.getItem('userFullName'); // Retrieve user's full name
+//     const loginButton = document.getElementById('loginButton'); // Get the login button
 
-    if (userFullName && loginButton) {
-        // Create a welcome message element
-        const welcomeMessage = document.createElement('span');
-        welcomeMessage.textContent = `Welcome, ${userFullName}`; // Display the user's name
-        welcomeMessage.style.cursor = 'pointer';
+//     if (userFullName && loginButton) {
+//         // Create a welcome message element
+//         const welcomeMessage = document.createElement('span');
+//         welcomeMessage.textContent = `Welcome, ${userFullName}`; // Display the user's name
+//         welcomeMessage.style.cursor = 'pointer';
 
-        // Replace the login button with the welcome message
-        loginButton.replaceWith(welcomeMessage);
+//         // Replace the login button with the welcome message
+//         loginButton.replaceWith(welcomeMessage);
 
-        // Add a click listener for logout functionality
-        welcomeMessage.addEventListener('click', () => {
-            // Show a confirmation dialog box
-            const userConfirmed = confirm('Do you want to logout?');
-            if (userConfirmed) {
-                localStorage.clear(); // Clear all stored user data
-                alert('You have been logged out successfully.');
-                // Remain on the current page after logout
-            } else {
-                alert('You remain logged in.');
-                // Do nothing, stay on the index page
-            }
-        });
-    }
-});
+//         // Add a click listener for logout functionality
+//         welcomeMessage.addEventListener('click', () => {
+//             // Show a confirmation dialog box
+//             const userConfirmed = confirm('Do you want to logout?');
+//             if (userConfirmed) {
+//                 localStorage.clear(); // Clear all stored user data
+//                 alert('You have been logged out successfully.');
+//                 // Remain on the current page after logout
+//                 window.location.href = 'index.html';
+//             } else {
+//                 alert('You remain logged in.');
+//                 // Do nothing, stay on the index page
+//                  window.location.href = 'index.html';
+//             }
+//         });
+//     }
+// });
 
 
 
