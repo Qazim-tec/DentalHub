@@ -16,6 +16,20 @@ async function fetchServices() {
         const services = await response.json();
         console.log(services); // Debugging to check API response
 
+        function formatPhoneNumber(phoneNumber) {
+            if (!phoneNumber) return ''; // Return empty if phoneNumber is missing
+            
+            // Remove non-numeric characters
+            let sanitizedNumber = phoneNumber.replace(/\D/g, '');
+            
+            // Add a default country code (e.g., 234 for Nigeria) if the number starts with '0'
+            if (sanitizedNumber.startsWith('0')) {
+                sanitizedNumber = '234' + sanitizedNumber.slice(1);
+            }
+            
+            return sanitizedNumber;
+        }
+
         // Populate the container with service cards
         container.innerHTML = services.map(service => `
             <div class="service-card" data-id="${service.id}">
@@ -26,7 +40,8 @@ async function fetchServices() {
                 <p><strong>Address:</strong> ${service.homeAddress || "Not provided"}</p>
                 <div class="button-group">
                     <button class="delete-btn" onclick="deleteService(${service.id})">Delete</button>
-                    <a class="whatsapp-btn" href="https://wa.me/${service.phoneNumber}" target="_blank" title="Chat on WhatsApp">
+                     <a class="whatsapp-btn" href="https://wa.me/${service.phoneNumber ? formatPhoneNumber(service.phoneNumber) : ''}" target="_blank" title="Chat on WhatsApp">
+
                         <i class="fab fa-whatsapp"></i>
                     </a>
                     <a class="email-btn" href="mailto:${service.email}" target="_blank" title="Send Email">

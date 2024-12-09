@@ -16,6 +16,23 @@ async function fetchAppointments() {
         const appointments = await response.json();
         console.log(appointments); // Debugging to check API response
 
+        
+        // Helper function to format phone numbers
+        function formatPhoneNumber(phoneNumber) {
+            if (!phoneNumber) return ''; // Return empty if phoneNumber is missing
+            
+            // Remove non-numeric characters
+            let sanitizedNumber = phoneNumber.replace(/\D/g, '');
+            
+            // Add a default country code (e.g., 234 for Nigeria) if the number starts with '0'
+            if (sanitizedNumber.startsWith('0')) {
+                sanitizedNumber = '234' + sanitizedNumber.slice(1);
+            }
+            
+            return sanitizedNumber;
+        }
+
+
         // Populate the container with appointment cards
         container.innerHTML = appointments.map(appointment => `
             <div class="appointment-card" data-id="${appointment.id}">
@@ -28,7 +45,8 @@ async function fetchAppointments() {
                 <p><strong>Preferred Time:</strong> ${appointment.preferedTime || "Not provided"}</p>
                 <div class="button-group">
                     <button class="delete-btn" onclick="deleteAppointment(${appointment.id})">Delete</button>
-                    <a class="whatsapp-btn" href="https://wa.me/${appointment.phoneNumber}" target="_blank" title="Chat on WhatsApp">
+                    <a class="whatsapp-btn" href="https://wa.me/${appointment.phoneNumber ? formatPhoneNumber(appointment.phoneNumber) : ''}" target="_blank" title="Chat on WhatsApp">
+
                         <i class="fab fa-whatsapp"></i>
                     </a>
                     <a class="email-btn" href="mailto:${appointment.email}" target="_blank" title="Send Email">

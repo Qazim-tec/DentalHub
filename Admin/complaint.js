@@ -16,6 +16,20 @@ async function fetchComplaints() {
         const complaints = await response.json();
         console.log(complaints); // Debugging to check API response
 
+        function formatPhoneNumber(phoneNumber) {
+            if (!phoneNumber) return ''; // Return empty if phoneNumber is missing
+            
+            // Remove non-numeric characters
+            let sanitizedNumber = phoneNumber.replace(/\D/g, '');
+            
+            // Add a default country code (e.g., 234 for Nigeria) if the number starts with '0'
+            if (sanitizedNumber.startsWith('0')) {
+                sanitizedNumber = '234' + sanitizedNumber.slice(1);
+            }
+            
+            return sanitizedNumber;
+        }
+
         // Populate the container with complaint cards
         container.innerHTML = complaints.map(complaint => `
             <div class="complaint-card" data-id="${complaint.id}">
@@ -25,7 +39,8 @@ async function fetchComplaints() {
                 <p><strong>Complaint:</strong> ${complaint.complain || "No details"}</p>
                 <div class="button-group">
                     <button class="delete-btn" onclick="deleteComplaint(${complaint.id})">Delete</button>
-                    <a class="whatsapp-btn" href="https://wa.me/${complaint.phone}" target="_blank" title="Chat on WhatsApp">
+                    <a class="whatsapp-btn" href="https://wa.me/${complaint.phone ? formatPhoneNumber(complaint.phone) : ''}" target="_blank" title="Chat on WhatsApp">
+
                         <i class="fab fa-whatsapp"></i>
                     </a>
                     <a class="email-btn" href="mailto:${complaint.email}" target="_blank" title="Send Email">
