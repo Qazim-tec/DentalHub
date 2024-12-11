@@ -8,12 +8,15 @@ window.addEventListener('DOMContentLoaded', () => {
     }
 
     if (userFullName) {
-        // Get the first letter of the full name
+        // Get the first letter of the first name
         const firstLetter = userFullName.charAt(0).toUpperCase();
 
-        // Create a user avatar element
+        // Get the first letter after the space (second word or last name)
+        const secondLetter = userFullName.split(' ')[1]?.charAt(0).toUpperCase() || '';
+
+        // Create a user avatar element with the first two initials
         const userAvatar = document.createElement('div');
-        userAvatar.textContent = firstLetter;
+        userAvatar.textContent = firstLetter + secondLetter; // Use both letters
         userAvatar.style.cssText = `
             cursor: pointer;
             display: inline-block;

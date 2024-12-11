@@ -78,10 +78,10 @@ nav{
     animation: logoSpin infinite 4s linear;
 }
 
-@keyframes logoSpin {
+/* @keyframes logoSpin {
     0%, 100% { transform: rotate(0); }
     50% { transform: rotate(360deg); }
-}
+} */
 
 
 
